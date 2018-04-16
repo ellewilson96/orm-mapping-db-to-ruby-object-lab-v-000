@@ -74,6 +74,7 @@ class Student
     SQL
 
     DB[:conn].execute(sql)
+    self.new_from_db(row)
 end
 
 end
