@@ -90,7 +90,8 @@ class Student
     sql = <<-SQL
     SELECT *
     FROM students
-    WHERE id = 1
+    WHERE grade = 10
+    LIMIT 1
     SQL
 
     DB[:conn].execute(sql)
