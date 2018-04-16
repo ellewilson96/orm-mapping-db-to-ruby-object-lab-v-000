@@ -84,12 +84,7 @@ class Student
   end
 
   def self.first_student_in_grade_10
-    sql = <<-SQL
-    SELECT TOP 1 *
-    FROM students
-    WHERE grade = 10
-    SQL
-
-    DB[:conn].execute(sql)
-    end
+  student = self.first_x_students_in_grade_10(1).flatten
+  self.new_from_db(student)
+  end
 end
