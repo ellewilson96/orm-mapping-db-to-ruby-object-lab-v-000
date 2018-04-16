@@ -84,8 +84,9 @@ class Student
     FROM students
     WHERE grade = 10
     SQL
-    
+
     DB[:conn].execute(sql).map do |row|
       row
   end
+end
 end
