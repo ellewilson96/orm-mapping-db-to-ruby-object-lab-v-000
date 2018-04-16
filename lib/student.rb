@@ -93,6 +93,6 @@ class Student
     WHERE id = 1
     SQL
 
-    DB[:conn].execute(sql, num)
+    DB[:conn].execute(sql)
     end
 end
