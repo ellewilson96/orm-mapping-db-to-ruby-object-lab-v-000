@@ -79,7 +79,7 @@ class Student
   end
 
   def self.first_X_students_in_grade_10
-    sql = "SELECT * FROM students WHERE grade=10 ORDER BY students.id LIMIT ?;"
+    sql = "SELECT * FROM students WHERE grade = 10 ORDER BY students.id LIMIT ?;"
     DB[:conn].execute(sql, num)
   end
 
