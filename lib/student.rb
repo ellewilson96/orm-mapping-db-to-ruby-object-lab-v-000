@@ -92,3 +92,4 @@ class Student
   sql = "SELECT * FROM students WHERE grade = ? ORDER BY students.id;"
   DB[:conn].execute(sql)
 end
+end
