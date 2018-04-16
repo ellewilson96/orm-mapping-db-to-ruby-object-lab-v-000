@@ -89,6 +89,6 @@ class Student
   end
 
   def self.all_students_in_grade_X
-  sql = "SELECT * FROM students WHERE grade = ? ORDER BY students.id LIMIT ?;"
+  sql = "SELECT * FROM students WHERE grade = ? ORDER BY students.id;"
   DB[:conn].execute(sql)
 end
