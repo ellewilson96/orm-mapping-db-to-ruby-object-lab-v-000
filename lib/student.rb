@@ -22,15 +22,6 @@ class Student
     end.first
   end
 
-  def self.all
-    sql = <<-SQL
-    SELECT *
-    FROM students
-    SQL
-
-    DB[:conn].execute(sql)
-    self.new_from_db(row)
-end
 
   def save
     sql = <<-SQL
@@ -76,5 +67,14 @@ end
     DB[:conn].execute(sql)
   end
 
+  def self.all
+    sql = <<-SQL
+    SELECT *
+    FROM students
+    SQL
+
+    DB[:conn].execute(sql)
+    self.new_from_db(row)
+end
 
 end
